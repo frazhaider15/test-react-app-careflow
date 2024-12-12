@@ -53,6 +53,8 @@ const App = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+  var token = process.env.REACT_APP_AppToken
+  var baseUrl = process.env.REACT_APP_BASEURL
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Header
@@ -117,7 +119,7 @@ const App = () => {
               minHeight: 280,
             }}
           >
-            <FormParser token="cnja8p5uj7mb415af3c0" apiBaseUrl="https://dev-backend-formbuilder.31g.co.uk"/>
+            <FormParser token={token} apiBaseUrl={baseUrl}/>
           </Content>
         </Layout>
       </Content>
